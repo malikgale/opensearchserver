@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>How to allow search into words</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="container">
+          <div class="site">
+            <div class="header">
+              <h1 class="title"><a href="/">FAQ - OpenSearchServer</a></h1>
+              <a class="extra" href="/">home</a>
+            </div>
+<em>This FAQ is just yet started! More content soon.</em>
+                <h2>How to allow search into words</h2>
+<p class="meta">22 Nov 2013</p>
+
+<div class="post">
+<p>Let&#8217;s say some indexed pages contain the word &#8220;ultraviolet&#8221; and one would like to return this document when only &#8220;ultra&#8221; or &#8220;violet&#8221; is searched.</p>
+
+<p>This can be achieved by creating a new Analyzer and applying this analyzer to a new field of the schema.</p>
+
+<p>Analyzer will use the Ngram filter to create lots of new words from the existings ones: <img alt='Create a new analyzer' src='/assets/faq/ngram.png' /></p>
+
+<p>A new field must then be created. It will take its value from the existing &#8220;content&#8221; field and will use the new &#8220;NgramAnalyzer&#8221; on this content. <img alt='Create a new field' src='/assets/faq/ngram_field.png' /></p>
+
+<p>Content must now be re-indexed and query must be improved to allow searching in the new &#8220;mega_content&#8221; field!</p>
+</div>
+
+
+            <div class="footer">
+              <div class="contact">
+
+              </div>
+              <div class="contact">
+                <p>
+                  <a href="http://www.open-search-server.com">OpenSearchServer</a><br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+
+    </body>
+</html>
