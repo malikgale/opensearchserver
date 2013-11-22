@@ -8,13 +8,13 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>{{ site.name }}</title>
+    <title>FAQ - OpenSearchServer</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ site_url }}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{{ site_url }}/css/main.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">{{ site.name }}</a>
+          <a class="navbar-brand" href="/">FAQ - OpenSearchServer</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -54,7 +54,23 @@
       <!-- Main component for a primary marketing message or call to action -->
       <div class="container">
       <div class="jumbotron">
-        {{ content }}
+        <h2>How to allow search into words</h2>
+<p class="meta">22 Nov 2013</p>
+
+<div class="post">
+<p>Let&#8217;s say some indexed pages contain the word &#8220;ultraviolet&#8221; and one would like to return this document when only &#8220;ultra&#8221; or &#8220;violet&#8221; is searched.</p>
+
+<p>This can be achieved by creating a new Analyzer and applying this analyzer to a new field of the schema.</p>
+
+<p>Analyzer will use the Ngram filter to create lots of new words from the existings ones: <img class='col-lg-12 img-rounded' src='/assets/faq/ngram.png' /></p>
+
+<p>A new field must then be created. It will take its value from the existing &#8220;content&#8221; field and will use the new &#8220;NgramAnalyzer&#8221; on this content.</p>
+
+<p><img alt='Create a new field' src='/assets/faq/ngram_field.png' /></p>
+
+<p>Content must now be re-indexed and query must be improved to allow searching in the new &#8220;mega_content&#8221; field!</p>
+</div>
+
       </div>
 
     </div> <!-- /container -->
@@ -64,6 +80,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="{{ site_url }}/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>

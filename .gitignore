@@ -1,0 +1,14 @@
+# Symfony directories
+vendor/*
+cache/*
+
+# Composer
+composer.phar
+
+# Logs
+logs/
+
+# Eclipse
+.project
+.buildpath
+.settings
