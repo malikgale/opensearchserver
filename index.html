@@ -10,8 +10,10 @@ title: FAQ - OpenSearchServer
         
         <h2>Entries</h2>
   <ul class="posts list-unstyled col-xs-offset-1">
-    {% for page in site.categories.faq %}
-      <li>&raquo; <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+    {% for page in site.pages %}
+        {% if page.url != '/index.html'%}
+            <li>&raquo; <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+        {% endif %}
     {% endfor %}
   </ul>
 </div>
