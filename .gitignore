@@ -1,12 +1,5 @@
-# Symfony directories
-vendor/*
-cache/*
-
-# Composer
-composer.phar
-
-# Logs
-logs/
+# Jekyll site
+_site
 
 # Eclipse
 .project
