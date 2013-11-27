@@ -5,15 +5,14 @@ title: FAQ - OpenSearchServer
 
 <div id="home">
   <h1>Welcome!</h1>
-        <p>This website aims to provide some small and quick to understand answers to every questions related to OpenSearchServer, frequent or less common questions!</p>
+        <p>This website aims to provide some small and quick to understand answers to every questions related to OpenSearchServer, frequent or less!</p>
         <p>This work has just been started, more content is coming soon!</p>
+        
         
         <h2>Entries</h2>
   <ul class="posts list-unstyled col-xs-offset-1">
-    {% for page in site.pages %}
-        {% if page.url != '/index.html'%}
-            <li>&raquo; <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
-        {% endif %}
-    {% endfor %}
+     {% for post in site.posts %}
+            <li>&raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
   </ul>
 </div>
