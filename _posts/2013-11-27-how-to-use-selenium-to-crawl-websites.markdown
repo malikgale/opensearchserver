@@ -69,7 +69,7 @@ This script executes the following actions:
 
 A set of RESTful API is available.
 
-**Save the script**
+### Save the script
 
 To store the script, use the following call:
 
@@ -78,7 +78,7 @@ To store the script, use the following call:
 * HTTP Header: Content-Type: application/json
 * Payload: The JSON script
 
-**Run the script**
+### Run the script
 
 To run the script use the following call:
 
@@ -98,7 +98,7 @@ To run the script use the following call:
   
 {% endhighlight %}
 
-**Subscript**
+###Subscript###
 
 A script can call a subscript for each web element found by a selector.
 
