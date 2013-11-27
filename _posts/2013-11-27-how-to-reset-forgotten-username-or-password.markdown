@@ -6,6 +6,7 @@ categories: faq installation
 ---
 
 If you forgot your user name or password or both, do the following:
+
 1. Close the Tomcat server by closing the cmd prompt window.
 2. Browse to the OpenSearchServer directory and locate the folder data.
 3. Open the data folder; locate and delete `users.xml`.

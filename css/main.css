@@ -49,6 +49,7 @@ body {
 .jumbotron h1 { font-size:40px; margin:0 0 20px 0;}
 h2 { color:rgb(59, 59, 59); }
 h3 { margin:0 0 10px 40px; }
+.post h3 { margin-left:0; font-weight:bold; }
 p {
 	font-weight: 300;
 	margin: 0 0 7px 0;
