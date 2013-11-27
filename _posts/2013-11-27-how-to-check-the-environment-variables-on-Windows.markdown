@@ -2,7 +2,7 @@
 layout: post
 title:  "How to check the environment variables on Windows"
 date:   2013-11-27 10:00:00
-categories: faq
+categories: faq installation
 ---
 
 1. Right click **My Computer**.

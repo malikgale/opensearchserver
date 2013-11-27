@@ -3,3 +3,4 @@ pygments: true
 baseurl: /opensearchserver
 show_drafts: true
 permalink: none
+markdown: rdiscount

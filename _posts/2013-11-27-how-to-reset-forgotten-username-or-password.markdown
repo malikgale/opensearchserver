@@ -2,7 +2,7 @@
 layout: post
 title:  "How to reset forgotten username or password"
 date:   2013-11-27 10:00:00
-categories: faq
+categories: faq installation
 ---
 
 If you forgot your user name or password or both, do the following:

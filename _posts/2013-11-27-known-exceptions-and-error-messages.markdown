@@ -2,7 +2,7 @@
 layout: post
 title:  "Known exceptions and error messages"
 date:   2013-11-27 10:00:00
-categories: faq
+categories: faq issues
 ---
 
 ## Bad credential

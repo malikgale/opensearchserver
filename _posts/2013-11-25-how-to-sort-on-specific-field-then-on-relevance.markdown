@@ -2,7 +2,7 @@
 layout: post
 title:  "How to sort on a specific field and then on relevance"
 date:   2013-11-22 15:48:52
-categories: faq
+categories: faq querying
 ---
 
 Documents can easily be sorted on one field, for instance price:

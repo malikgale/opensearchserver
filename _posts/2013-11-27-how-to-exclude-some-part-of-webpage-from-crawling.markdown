@@ -2,7 +2,7 @@
 layout: post
 title:  "How to exclude some part of webpage from crawling"
 date:   2013-11-27 10:00:00
-categories: faq
+categories: faq crawling
 ---
 
 OpenSearchServer allows you to exclude certain part of webpage from crawling.

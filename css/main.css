@@ -28,12 +28,14 @@ body {
 
 .jumbotron { background:#FAFAFA; color:#6f6f6f; margin:0;}
 h2 { color:rgb(59, 59, 59); }
+h3 { margin:0 0 10px 40px; }
 p {
 	font-weight: 300;
 	margin: 0 0 7px 0;
 	padding: 0 0 15px 0;
 	font-size:18px;
 }
+li { font-size:18px; line-height:35px; }
 #maincontent { margin-top:75px;}
 footer {
 	min-height:120px;

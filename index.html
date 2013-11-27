@@ -1,18 +1,33 @@
----
-layout: default
-title: FAQ - OpenSearchServer
+--- 
+layout: default 
+title: FAQ - OpenSearchServer 
 ---
 
 <div id="home">
-  <h1>Welcome!</h1>
-        <p>This website aims to provide some small and quick to understand answers to every questions related to OpenSearchServer, frequent or less!</p>
-        <p>This work has just been started, more content is coming soon!</p>
-        
-        
-        <h2>Entries</h2>
-  <ul class="posts list-unstyled col-xs-offset-1">
-     {% for post in site.posts %}
+    <h1>Welcome!</h1>
+    <p>This website aims to provide some small and quick to understand answers to every questions related to OpenSearchServer, frequent or less!</p>
+    <p>This work has just been started, more content is coming soon!</p>
+
+
+    <h2>Entries</h2>
+
+    <h3>Installation</h3>
+    <ul class="posts list-unstyled col-xs-offset-1">
+        {% for post in site.categories.installation%}
+            <li>&raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li> 
+        {% endfor %}
+    </ul>
+    <h3>Crawling</h3>
+    <ul class="posts list-unstyled col-xs-offset-1">
+        {% for post in site.categories.crawling%}
             <li>&raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
-  </ul>
+    </ul>
+    
+    <h3>Querying</h3>
+    <ul class="posts list-unstyled col-xs-offset-1">
+        {% for post in site.categories.querying%}
+            <li>&raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li> 
+        {% endfor %}
+    </ul>
 </div>

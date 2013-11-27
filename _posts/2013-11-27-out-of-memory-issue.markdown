@@ -2,7 +2,7 @@
 layout: post
 title:  "Out of memory issue"
 date:   2013-11-27 10:00:00
-categories: faq
+categories: faq issues
 ---
 
 By default, OpenSearchServer uses only 256 megabytes of RAM. This value is not enough for advanced use. To allow OSS to use more memory, you have to add two lines in the start.sh file

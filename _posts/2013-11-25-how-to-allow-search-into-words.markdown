@@ -2,7 +2,7 @@
 layout: post
 title:  "How to allow search into words"
 date:   2013-11-22 15:48:52
-categories: faq
+categories: faq querying
 ---
 
 Let's say some indexed pages contain the word "ultraviolet" and one would like to return this document when only "ultra" or "violet" is searched.
