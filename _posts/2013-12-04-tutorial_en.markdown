@@ -18,14 +18,14 @@ You will:
 
 Here is the final result:
 
-![Résultat final]({{ site.baseurl }}/assets/tutorial/finaldisplay.png)
+![Résultat final]({{ site.baseurl }}/assets/tutorial/finaldisplay_en.png)
 
 Some pages have been prepared to help us in this tutorial. The example is a news website with 4 URL:
 
-* [http://www.open-search-server.com/fr/site-de-test-crawler/](http://www.open-search-server.com/fr/site-de-test-crawler/)
-  * [http://www.open-search-server.com/fr/site-de-test-crawler-le-chomage-est-en-baisse/](http://www.open-search-server.com/fr/site-de-test-crawler-le-chomage-est-en-baisse/)
-  * [http://www.open-search-server.com/fr/site-de-test-crawler-la-coupe-du-monde-2040](http://www.open-search-server.com/fr/site-de-test-crawler-la-coupe-du-monde-2040/)
-  * [http://www.open-search-server.com/fr/site-de-test-crawler-la-ceremonie-des-oscars/](http://www.open-search-server.com/fr/site-de-test-crawler-la-ceremonie-des-oscars/)
+* [http://www.open-search-server.com/test-website/](http://www.open-search-server.com/test-website/)
+  * [http://www.open-search-server.com/test-website/unemployment-is-decreasing/](http://www.open-search-server.com/test-website/unemployment-is-decreasing/)
+  * [http://www.open-search-server.com/test-website/worldcup-2040/](http://www.open-search-server.com/test-website/worldcup-2040/)
+  * [http://www.open-search-server.com/test-website/oscar-academy-awards/](http://www.open-search-server.com/test-website/oscar-academy-awards/)
 
 Before starting you will need to [install OpenSearchServer](http://www.open-search-server.com/install-opensearchserver/), which will take you 3 minutes only! 
 
@@ -35,7 +35,7 @@ Let's explain some key concepts of the search engines area:
 
 * **Index**: this is where documents are stored, sorted and analysed with several algorithms to allow quick search.
 * **Crawler**: web crawler explores websites to index their pages. It can follow every links that it finds and be limited to some patterns of URL only. It can read lots of types of document: web page, files, images, etc. There are also crawlers for filesystem and databases.
-* **Schema**: it is the structure of the index. It defines the fields of the indexed documents.
+* **Schema**: it is the index'structure. It defines the fields of indexed documents.
 * **Query**: queries are the full-text search queries. Several parameters can be configured in queries, specially which fields to search in, weight for each field, facets, snippets, etc. 
 * **Facet**: facets are counter with filter, on particular fields. 
 * **Snippet**: snippets are extracts of text that contain the searched keywords. 
@@ -46,7 +46,7 @@ Let's explain some key concepts of the search engines area:
 
 This picture shows those main concepts:
 
-![Schéma global]({{ site.baseurl }}/assets/tutorial/schema3.png)
+![Schéma global]({{ site.baseurl }}/assets/tutorial/schema3_en.png)
 
 Now that everything is crystal clear let's start!
 
@@ -105,14 +105,16 @@ In the tab `Pattern list` we will configure which URL we want the crawler to exp
 
 ![Pattern d'URL]({{ site.baseurl }}/assets/tutorial/5.crawler.png)
 
-We want to crawl this website: [http://www.open-search-server.com/fr/site-de-test-crawler/](http://www.open-search-server.com/fr/site-de-test-crawler/). 
-We can see that this page has links towards every news page. Thus we can tell the crawler to start by this page only, it will discover the links to the others pages.
+We want to crawl this website: [http://www.open-search-server.com/test-website/](http://www.open-search-server.com/test-website/). 
+We can see that this page has links towards every news page. Thus we can tell the crawler to start by this page only, it will discover the links to the others pages. 
 
-In the textarea write `http://www.open-search-server.com/fr/site-de-test-crawler/` and `http://www.open-search-server.com/fr/site-de-test-crawler-*` and then click on the button `Add`.
+In the textarea write `http://www.open-search-server.com/test-website/*` and then click on the button `Add`.
 
-The `-*` part tells the crawler to explore every page for which URL starts with `http://www.open-search-server.com/fr/site-de-test-crawler-`.
+The `-*` part tells the crawler to explore every page for which URL starts with `http://www.open-search-server.com/test-website/`.
 
-![Pattern d'URL]({{ site.baseurl }}/assets/tutorial/6.crawler_patterns.png)
+Since every news page is "under" the main page in term of URL it will works fine. 
+
+![Pattern d'URL]({{ site.baseurl }}/assets/tutorial/6.crawler_patterns_en.png)
 
 ### Crawl start
 
@@ -169,7 +171,7 @@ Click on `Save & close` and then click on the `View` button to open the renderer
 
 Try to search for something, for instance `coupe`. Voilà! some documents are found and displayed, with a link to the web page and some snippets. 
 
-![Renderer]({{ site.baseurl }}/assets/tutorial/12.renderer_view.png)
+![Renderer]({{ site.baseurl }}/assets/tutorial/12.renderer_view_en.png)
 
 You can also see that autocompletion is working and that the `host` facet is there on the left!
 
