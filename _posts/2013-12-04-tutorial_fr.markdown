@@ -107,11 +107,13 @@ L'onglet sélectionné par défaut, `Pattern list`, est celui qui nous intéress
 
 Le site que nous souhaitons crawler est [http://www.open-search-server.com/fr/site-de-test-crawler/](http://www.open-search-server.com/fr/site-de-test-crawler/). Nous pouvons voir que cette URL contient les liens vers toutes les pages d'actualités. Nous pouvons donc indiquer au crawler de commencer son crawl ici et d'indexer toutes les pages se trouvant "sous" cette URL.
 
-Dans le champ de saisie de l'onglet Pattern list indiquez `http://www.open-search-server.com/fr/site-de-test-crawler/` et `http://www.open-search-server.com/fr/site-de-test-crawler-*` puis cliquer sur le bouton Add. L'URL renseigné s'ajoute à la zone du dessous contenant toutes les URL à crawler.
+Dans le champ de saisie de l'onglet Pattern list indiquez `http://www.open-search-server.com/fr/site-de-test-crawler/` puis cliquer sur le bouton Add. L'URL renseignée s'ajoute à la zone du dessous contenant toutes les URL à crawler.
 
-La partie `-*` indique ici au crawler de parcourir toutes les pages dont l'URL débute par `http://www.open-search-server.com/fr/site-de-test-crawler-`.
+La partie `/*` indique ici au crawler de parcourir toutes les pages dont l'URL débute par `http://www.open-search-server.com/fr/site-de-test-crawler/`.
 
 ![Pattern d'URL]({{ site.baseurl }}/assets/tutorial/6.crawler_patterns.png)
+
+Etant donnée que les pages d'actualités se trouvent toutes "sous" la première page d'un point de vue de leur URL le crawler pourra les détecter et les parcourir.
 
 ### Démarrage du crawl
 
