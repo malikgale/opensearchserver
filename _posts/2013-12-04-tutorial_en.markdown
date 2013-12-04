@@ -46,7 +46,7 @@ Let's explain some key concepts of the search engines area:
 
 This picture shows those main concepts:
 
-![Schéma global]({{ site.baseurl }}/assets/tutorial/schema3.PNG)
+![Schéma global]({{ site.baseurl }}/assets/tutorial/schema3.png)
 
 Now that everything is crystal clear let's start!
 

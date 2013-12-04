@@ -45,7 +45,7 @@ Avant de démarrer ce tutoriel il est important de connaitre les principaux cons
 
 Le schéma suivant présente les principales briques d'OpenSearchServer de manière simplifiée :
 
-![Schéma global]({{ site.baseurl }}/assets/tutorial/schema3.PNG)
+![Schéma global]({{ site.baseurl }}/assets/tutorial/schema3.png)
 
 Maintenant que tout est clair, débutons !
 
