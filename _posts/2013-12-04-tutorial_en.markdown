@@ -110,7 +110,7 @@ We can see that this page has links towards every news page. Thus we can tell th
 
 In the textarea write `http://www.open-search-server.com/test-website/*` and then click on the button `Add`.
 
-The `-*` part tells the crawler to explore every page for which URL starts with `http://www.open-search-server.com/test-website/`.
+The `/*` part tells the crawler to explore every page for which URL starts with `http://www.open-search-server.com/test-website/`.
 
 Since every news page is "under" the main page in term of URL it will works fine. 
 
