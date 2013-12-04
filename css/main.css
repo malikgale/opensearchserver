@@ -67,6 +67,8 @@ footer {
 }
 footer a { color:white; }
 footer a:hover { color:white; }
+
+.post img {  box-shadow: 1px 1px 12px #555; border-radius:4px;}
 /*****************************************************************************/
 /*
 /* Posts

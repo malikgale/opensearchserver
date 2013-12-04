@@ -36,7 +36,7 @@ A second sort can be added, on `score`. `score` is not a real field of the docum
       "direction": "ASC"
     },
     {
-      "field": "sort",
+      "field": "score",
       "direction": "DESC"
     }
   ]

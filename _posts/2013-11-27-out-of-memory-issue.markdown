@@ -5,7 +5,7 @@ date:   2013-11-27 10:00:00
 categories: faq issues
 ---
 
-By default, OpenSearchServer uses only 256 megabytes of RAM. This value is not enough for advanced use. To allow OSS to use more memory, you have to add two lines in the start.sh file
+By default, OpenSearchServer uses only 256 megabytes of RAM. This value is not enough for advanced use. To allow OSS to use more memory, you have to add two lines in the start.sh file.
 
 ## Allow more RAM
 
@@ -13,11 +13,7 @@ By default, OpenSearchServer uses only 256 megabytes of RAM. This value is not e
 
 {% highlight bash %}
   
-OPENSEARCHSERVER_DATA=`pwd`/data
-export OPENSEARCHSERVER_DATA 
-CATALINA_OPTS="-Xms2G -Xmx2G -server"
-export CATALINA_OPTS
-exec "$EXECUTABLE"
+JAVA_OPTS="-Xms1G -Xmx1G"
    
 {% endhighlight %}
 
@@ -25,14 +21,11 @@ exec "$EXECUTABLE"
 
 {% highlight bash %}
   
-set OPENSEARCHSERVER_DATA=%cd%\data
-set CATALINA_OPTS=-server -Xms2G -Xmx2G
-cd %cd%\apache-tomcat-7.0.37
-call "%EXECUTABLE%"
+set JAVA_OPTS=-Xms1G -Xmx1G  
   
 {% endhighlight %}
 
-The memory allocated to OSS is defined by the CATALINA_OPTS options.
+The memory allocated to OSS is defined by the JAVA_OPTS options
 
 `-Xms2G -Xmx2G` means 2 GB of RAM.
 You may use `-Xms768m -Xmx768m` to allow 768 megabytes of RAM.
@@ -47,11 +40,7 @@ Then you have to modify the start.sh file as is:
 
 {% highlight bash %}
   
-OPENSEARCHSERVER_DATA=`pwd`/data
-export OPENSEARCHSERVER_DATA
-CATALINA_OPTS="-d64 -Xms6G -Xmx6G -server"
-export CATALINA_OPTS
-exec "$EXECUTABLE"
+JAVA_OPTS="-d64 -Xms6G -Xmx6G -server"  
   
 {% endhighlight %}
 
