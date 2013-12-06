@@ -36,7 +36,6 @@ The coordinate (latitude and longitude) are supposed to be expressed in decimal 
 
 The [JSON indexing API](https://github.com/jaeksoft/opensearchserver/wiki/Document-put-JSON) is documented on our [API wiki](https://github.com/jaeksoft/opensearchserver/wiki/)
 
-
 {% highlight json %}
 [
   {
@@ -64,4 +63,86 @@ The [JSON indexing API](https://github.com/jaeksoft/opensearchserver/wiki/Docume
      ]
    }
 ] 
-{% endhighlight %}  
+{% endhighlight %}
+
+### Make a query
+
+On our example, we want to find a city located around 10 kilometers of a given position.
+
+The latitudeField and longitudeField are mapped to the fields of the schema.
+
+The "geo" part contains the central position.
+
+The "GeoFilter" applies a  geographical filter following the given parameters.
+
+Just make a geo located search using the [Search(Field) API](https://github.com/jaeksoft/opensearchserver/wiki/Search-field) described on [our API wiki](https://github.com/jaeksoft/opensearchserver/wiki/):
+
+{% highlight json %}
+{
+        "start": 0,
+        "rows": 10,
+        "geo": {
+            "latitudeField": "latitude",
+            "longitudeField": "longitude",
+            "latitude": 48.85341,
+            "longitude": 2.3488,
+            "coordUnit": "DEGREES"
+        },
+        "emptyReturnsAll": true,
+        "filters": [
+            {
+                "type": "GeoFilter",
+                "shape": "SQUARED",
+                "negative": false,
+                "unit": "KILOMETERS",
+                "distance": 10
+            }
+        ],
+        "returnedFields": [ "city", "latitude", "longitude" ]
+}
+{% endhighlight %}
+
+### Document returned
+
+And here are the document found.
+
+{% highlight json %}
+{
+    "successful": true,
+    "documents": [
+        {
+            "pos": 0,
+            "score": 1,
+            "collapseCount": 0,
+            "fields": [
+                {
+                    "fieldName": "city",
+                    "values": [
+                        "Paris"
+                    ]
+                },
+                {
+                    "fieldName": "latitude",
+                    "values": [
+                        "P0.8526529"
+                    ]
+                },
+                {
+                    "fieldName": "longitude",
+                    "values": [
+                        "P0.0409943"
+                    ]
+                }
+            ]
+        }
+    ],
+    "facets": [],
+    "query": "*:*",
+    "rows": 10,
+    "start": 0,
+    "numFound": 1,
+    "time": 126,
+    "collapsedDocCount": 0,
+    "maxScore": 1
+}
+{% endhighlight %}
