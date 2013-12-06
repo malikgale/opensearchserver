@@ -5,3 +5,4 @@ _site
 .project
 .buildpath
 .settings
+/.DS_Store
